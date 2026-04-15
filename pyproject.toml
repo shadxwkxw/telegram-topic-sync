@@ -1,0 +1,40 @@
+[project]
+name = "telegram-topic-sync"
+version = "0.1.0"
+description = "Migrate Telegram forum-topic history between supergroups."
+requires-python = ">=3.11"
+dependencies = [
+    "telethon>=1.28",
+    "python-dotenv>=1.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["app"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+
+[tool.pylint.main]
+py-version = "3.11"
+jobs = 0
+
+[tool.pylint.format]
+max-line-length = 100
