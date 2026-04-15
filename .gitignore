@@ -1,0 +1,35 @@
+.DS_Store
+
+# PyCharm / JetBrains
+.idea/
+*.iml
+out/
+
+.venv
+
+# Python cache and virtual envs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.pycache_local/
+.pycache_tmp
+
+# Build / packaging artifacts
+*.egg-info/
+build/
+dist/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+migrate.session
+
+# User-specific mapping
+topic_mapping.json
+!topic_mapping.example.json
